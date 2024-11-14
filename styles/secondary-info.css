@@ -1,0 +1,45 @@
+@media (min-width: 500px) and (max-width: 768px) {
+    .secondary-info { 
+        margin: 5px 10px !important;
+    }
+
+    .secondary-info-item p {
+        height: 100%;
+    }
+}
+
+.secondary-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px 140px;
+    height: 90px;
+    color: var(--text-color);
+}
+
+.secondary-info-item {
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    text-transform: uppercase;
+    align-items: center; 
+    font-size: 15px;
+}
+
+.secondary-info-item p {
+    font-weight: bolder;
+    line-height: 15px;
+    margin-top: 15px;
+    letter-spacing: 0.4px;
+}
+
+.secondary-info-item span {
+    font-weight: 300;
+    color: var(--description-text-color);
+}
+
+.secondary-info-icon {
+    width: 40px;
+    opacity: 0.8;
+}

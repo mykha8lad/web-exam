@@ -1,0 +1,93 @@
+.collections {    
+    display: flex;
+    flex-direction: column;
+    row-gap: 60px;
+    margin-top: 60px;
+    margin-bottom: 150px;
+}
+
+.row-collection {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    flex-wrap: wrap;   
+}
+
+.index-1 {
+    position: relative;
+    overflow: hidden;
+}
+
+.index-1 img {
+    display: block;
+    filter: brightness(50%);
+    transition: transform 0.3s ease;
+}
+
+.index-1:hover img {
+    transform: scale(1.1);
+}
+
+.overlay-collection {
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    color: #fff;
+    width: 200px;
+}
+
+.overlay-collection h1 {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.overlay-collection p {
+    font-size: 15px;
+    line-height: 22px;    
+}
+
+.overlay-collection button {
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: bold;
+    font-size: 13px;
+    padding: 7px 12px;
+    border: 1px solid #fff;
+    margin-top: 50px;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.overlay-collection button:hover {
+    color: var(--text-color);
+    background-color: #fff;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    margin-top: 5px; 
+    color: var(--text-color);   
+}
+
+.title {
+    color: var(--text-color);
+    font-weight: 700;
+    text-decoration: none;    
+    font-size: 20px;
+}
+
+.description span {
+    color: var(--description-text-color);
+    font-size: 20px;
+}
+
+.price {
+    font-weight: 700;    
+    font-size: 30px;
+    margin: 0;
+}

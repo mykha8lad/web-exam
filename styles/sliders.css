@@ -1,0 +1,82 @@
+@media (min-width: 768px) and (max-width: 992px) {
+    .sliders .overlay p {        
+        font-size: 14px;        
+    }
+    
+    .sliders .overlay h1 {
+        font-size: 50px;        
+        line-height: 40px;
+        margin-top: 15px;
+    }
+    
+    .sliders .btn {        
+        padding: 7px 25px;        
+        font-size: 10px;        
+    }
+}
+
+@media (min-width: 500px) and (max-width: 768px) {
+    .sliders .overlay p {        
+        font-size: 10px;        
+    }
+    
+    .sliders .overlay h1 {
+        font-size: 35px;        
+        line-height: 25px;
+        margin-top: 10px;
+    }
+    
+    .sliders .btn {        
+        padding: 4px 21px;        
+        font-size: 7px;        
+    }
+}
+
+.sliders {
+    position: relative;
+}
+
+.sliders img {
+    width: 100%;
+    background-size: cover; /* Растягивает изображение на всю ширину контейнера */
+    background-position: center; /* Центрирует изображение по центру */
+    background-repeat: no-repeat;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;    
+}
+
+.overlay p {
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.overlay h1 {
+    font-size: 65px;
+    font-weight: bold;
+    line-height: 70px;
+    margin-top: 20px;
+}
+
+.btn {
+    background-color: var(--hover-color);
+    color: #fff;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: bolder;
+}
+
+.btn:hover {
+    color: #fff;
+    background-color: var(--hover-color);
+    transition: color 0.2s ease-in-out;
+}

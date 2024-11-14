@@ -1,0 +1,132 @@
+.footer {
+    background-color: #252525;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+    column-gap: 85px;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.about {
+    color: var(--footer-text-color);    
+    font-size: 17px;
+}
+
+.text-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 6px;
+}
+
+.text-list a,
+.text-list p {
+    color: var(--footer-text-color);
+    text-decoration: none;
+    font-size: 17px;
+    margin: 0;
+}
+
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2px;
+}
+
+.text-list a:hover {
+    color: var(--hover-color);
+    transition: color 0.2s ease-in-out;
+}
+
+.footer-content h1 {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.social-payment {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+.icon-column {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2px;
+}
+
+.icon-row {
+    display: flex;
+    flex-direction: row;
+    column-gap: 15px;
+}
+
+.icon path {
+    fill: var(--footer-text-color);
+}
+
+.icon:hover path {
+    fill: var(--hover-color);
+    transition: fill 0.2s ease-in-out;
+}
+
+.footer-info {
+    background-color: #2F2F2F;
+    color: var(--description-text-color);
+}
+
+.footer-info-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 14px;
+    padding: 13px 0;
+    margin-top: 40px;
+}
+
+.contact {
+    display: flex;
+    flex-direction: row;
+    column-gap: 15px;
+    border-right: var(--description-text-color) 1px solid;    
+    padding: 0 20px;
+}
+
+.contact a {
+    text-decoration: none;
+    color: var(--description-text-color);
+}
+
+.contact a:hover {
+    color: var(--hover-color);
+    transition: color 0.2s ease-in-out;
+}
+
+.contact-lang-price {
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+}
+
+.lang-price {
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+}
+
+.lang-price select {
+    background-size: 10px;
+    outline: none;
+    background-color: #2F2F2F;
+    color: var(--description-text-color);    
+    border: none;
+}

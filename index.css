@@ -1,0 +1,268 @@
+@import '/styles/normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap');
+@import '/styles/header.css';
+@import '/styles/sliders.css';
+@import '/styles/secondary-info.css';
+@import '/styles/collections.css';
+@import '/styles/sections.css';
+@import '/styles/footer.css';
+
+html {
+    overflow-x: hidden;
+}
+
+:root {
+    --text-color: #333333;
+    --hover-color: #ffa200;
+    --description-text-color: #898989;
+    --footer-text-color: #acacac;
+}
+
+body {
+    font-family: "Afacad Flux", sans-serif;
+}
+
+.container {
+        min-width: 1170px;
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .container {
+        min-width: 970px;
+    }
+}
+
+@media (max-width: 992px) {    
+    .news .subscribe-form,
+    .news .calendar .content-calendar,
+    .news .banners {
+        flex-direction: column;
+        row-gap: 20px;
+    }    
+}
+
+@media (min-width: 500px) and (max-width: 768px) {
+    .container {
+        min-width: 550px;
+    }
+}
+
+.divider {
+    display: block;
+    margin: 25px 0;
+    line-height: 1;    
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-color);
+    opacity: .5;
+}
+
+.divider:not(.horizontal) {
+    height: 1px;
+    border-top: 1px solid #e1e1e1;
+}
+
+.customer {
+    color: #fff;
+    background-color: #333333;    
+}
+
+.customer-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 70px;
+}
+
+.customer-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+}
+
+.customer-images {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 65px 30px;
+}
+
+.customer-title {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 50px; 
+    margin-top: 45px;   
+}
+
+.customer-name {
+    font-weight: bold;
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.customer-text {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px;
+    padding: 10px 20px;
+}
+
+.news {
+    display: flex;
+    flex-direction: column;
+    margin: 60px 0;
+}
+
+.calendar {
+    display: flex;
+    flex-direction: column;
+}
+
+.calendar h2 {
+    margin: 0;
+    color: var(--text-color);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.content-calendar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 50px;
+    column-gap: 40px;
+}
+
+.calendar-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 35px;
+}
+
+.calendar-item img {
+    width: 270px;
+    height: 207px;
+}
+
+.calendar-info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+}
+
+.date {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    column-gap: 10px;
+    margin-top: 0;
+}
+
+.date h2 {
+    font-size: 70px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.date small {
+    font-size: 22px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: var(--description-text-color);
+}
+
+.calendar-description {
+    display: flex;
+    flex-direction: column;    
+}
+
+.calendar-description p {
+    color: var(--description-text-color);
+    font-size: 17px;    
+    line-height: 23px;
+    margin: 0;
+}
+
+.calendar-description a { 
+    color: var(--description-text-color);    
+}
+
+.calendar-description a:hover {
+    color: var(--hover-color);
+    text-decoration-color: var(--hover-color);
+    transition: color 0.2s ease-in-out;    
+}
+
+.subscribe-form {
+    margin: 60px 0;
+    background-color: var(--text-color);
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 40px;    
+}
+
+.subscribe-form h1 {
+    text-transform: uppercase;
+    line-height: 25px;
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.subscribe-form p {
+    text-align: center;    
+    font-size: 17px;
+    margin-top: 13px;
+}
+
+.email-form form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 10px;    
+}
+
+.email-form input {
+    width: 340px;
+    height: 40px;
+    padding: 0 15px;    
+    border: 0;
+}
+
+.email-form button {
+    background-color: var(--hover-color);
+    color: #fff;
+    padding: 11px 28px;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    border: 0;    
+}
+
+.banners {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.back-top {            
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.back-top small {
+    font-family: Montserrat, Arial, sans-serif;
+    color: var(--description-text-color);    
+}
+
+.back-top-link {
+    text-decoration: none;
+}
