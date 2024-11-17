@@ -1,0 +1,33 @@
+.search-container {
+    position: relative;
+    display: inline-block;
+}
+#search-bar {
+    display: none;
+    width: 200px;
+    padding: 5px;
+}
+#suggestions {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 25px;
+    width: 200px;
+    background: #fff;
+    border: 1px solid #ccc;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1000;
+}
+#suggestions li {
+    padding: 10px;
+    cursor: pointer;
+    list-style-type: none;    
+}
+#suggestions li:hover {
+    background-color: #f0f0f0;
+}
+.search-icon {
+    cursor: pointer;
+    font-size: 24px;
+}

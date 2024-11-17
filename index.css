@@ -6,6 +6,7 @@
 @import '/styles/collections.css';
 @import '/styles/sections.css';
 @import '/styles/footer.css';
+@import '/styles/searchJS.css';
 
 html {
     overflow-x: hidden;
