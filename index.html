@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="index.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="scripts/search.js" defer></script>
+    <script src="scripts/slider.js" defer></script>
+    <script src="scripts/customers-slider.js" defer></script>
     <title>Document</title>
 </head>
 <body>
@@ -127,11 +129,39 @@
         </div>
 
         <div class="sliders">
-            <img src="images/sliders/4.jpg" alt="slide4">
-            <div class="overlay">
-                <p>What`s trending</p>
-                <h1>Look book<br>Fashion 2015</h1>
-                <button class="btn">View Now</button>
+            <div class="carousel-slide">
+                <div class="slider-item">
+                    <img src="images/sliders/1.jpg" alt="slide4">
+                    <div class="overlay">
+                        <p>The shoes for summer</p>
+                        <h1>Shoes Vans<br>$160.00</h1>
+                        <button class="btn">Shop Now</button>
+                    </div>
+                </div>                
+                <div class="slider-item">
+                    <img src="images/sliders/2.jpg" alt="slide4">
+                    <div class="overlay">
+                        <p>New fashion for winter</p>
+                        <h1>New Jacket<br>Only $60</h1>
+                        <button class="btn">Shop Now</button>
+                    </div>
+                </div>
+                <div class="slider-item">
+                    <img src="images/sliders/3.jpg" alt="slide4">
+                    <div class="overlay">
+                        <p>New t-shirt</p>
+                        <h1>Vintage Raglan</h1>
+                        <button class="btn">Shop Now</button>
+                    </div>
+                </div>
+                <div class="slider-item">
+                    <img src="images/sliders/4.jpg" alt="slide4">
+                    <div class="overlay">
+                        <p>What`s trending</p>
+                        <h1>Look book<br>Fashion 2015</h1>
+                        <button class="btn">View Now</button>
+                    </div>
+                </div>                
             </div>
         </div>
 
@@ -169,7 +199,7 @@
                         </div>
                     </div>                    
                     <div class="collection">
-                        <img src="images/collections/clothing/1.jpg" alt="">
+                        <a href="#"><img src="images/collections/clothing/1.jpg" alt=""></a>
                         <div class="description">
                             <a href="#" class="title">Goodale Rutledge Navy/White</a>
                             <span>Shirt</span>
@@ -177,7 +207,7 @@
                         </div>
                     </div>                                        
                     <div class="collection">
-                        <img src="images/collections/clothing/2.jpg" alt="">
+                        <a href="#"><img src="images/collections/clothing/2.jpg" alt=""></a>
                         <div class="description">
                             <a href="#" class="title">Gin Lane Greenport Cotton Shirt</a>
                             <span>Shirt</span>
@@ -185,7 +215,7 @@
                         </div>
                     </div>                                
                     <div class="collection dn">
-                        <img src="images/collections/clothing/3.jpg" alt="">
+                        <a href="#"><img src="images/collections/clothing/3.jpg" alt=""></a>
                         <div class="description">
                             <a href="#" class="title">Gin Lane Greenport Cotton Shirt</a>
                             <span>Shirt</span>
@@ -195,7 +225,7 @@
                 </div>
                 <div class="row-collection">                                                            
                     <div class="collection dn">
-                        <img src="images/collections/shoes/1.jpg" alt="">
+                        <a href="#"><img src="images/collections/shoes/1.jpg" alt=""></a>
                         <div class="description">
                             <a href="#" class="title">Gin Lane Greenport Cotton Shirt</a>
                             <span>Shirt</span>
@@ -203,7 +233,7 @@
                         </div>
                     </div>                                        
                     <div class="collection">
-                        <img src="images/collections/shoes/2.jpg" alt="">
+                        <a href="#"><img src="images/collections/shoes/2.jpg" alt=""></a>
                         <div class="description">
                             <a href="#" class="title">Goodale Rutledge Navy/White</a>
                             <span>Shirt</span>
@@ -211,7 +241,7 @@
                         </div>
                     </div>                                        
                     <div class="collection">
-                        <img src="images/collections/shoes/3.jpg" alt="">
+                        <a href="#"><img src="images/collections/shoes/3.jpg" alt=""></a>
                         <div class="description">
                             <a href="#" class="title">Gin Lane Greenport Cotton Shirt</a>
                             <span>Shirt</span>
@@ -237,15 +267,16 @@
                         </div>
                     </div>
                     <div class="collection">
-                        <img src="images/collections/accessories/1.jpg" alt="">
+                        <a href="#"><img src="images/collections/accessories/1.jpg" alt=""></a>
                         <div class="description">
                             <a href="#" class="title">Gin Lane Greenport Cotton Shirt</a>
                             <span>Shirt</span>
                             <p class="price">$80</p>
                         </div>
                     </div>
+                    
                     <div class="collection">
-                        <img src="images/collections/accessories/2.jpg" alt="">
+                        <a href="#"><img src="images/collections/accessories/2.jpg" alt=""></a>
                         <div class="description">
                             <a href="#" class="title">Goodale Rutledge Navy/White</a>
                             <span>Shirt</span>
@@ -253,7 +284,7 @@
                         </div>
                     </div>
                     <div class="collection dn">
-                        <img src="images/collections/accessories/3.jpg" alt="">
+                        <a href="#"><img src="images/collections/accessories/3.jpg" alt=""></a>
                         <div class="description">
                             <a href="#" class="title">Gin Lane Greenport Cotton Shirt</a>
                             <span>Shirt</span>
@@ -395,18 +426,35 @@
                         <p class="customer-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum sunt, officia quos amet voluptatibus quam dolorum tenetur aperiam voluptatem quo totam accusantium?</p>
                     </div>
                     <div class="customer-images">
-                        <div class="customer-image">
-                            <img src="images/collections/customer/brand-1.png" alt="">
+                        <div class="customer-slider-wrapper">
+                            <div class="customer-image">
+                                <img src="images/collections/customer/brand-1.png" alt="">
+                            </div>
+                            <div class="customer-image">
+                                <img src="images/collections/customer/brand-2.png" alt="">
+                            </div>
+                            <div class="customer-image">
+                                <img src="images/collections/customer/brand-3.png" alt="">
+                            </div>
+                            <div class="customer-image">
+                                <img src="images/collections/customer/brand-4.png" alt="">
+                            </div>
+                            <div class="customer-image">
+                                <img src="images/collections/customer/brand-1.png" alt="">
+                            </div>
+                            <div class="customer-image">
+                                <img src="images/collections/customer/brand-2.png" alt="">
+                            </div>
+                            <div class="customer-image">
+                                <img src="images/collections/customer/brand-3.png" alt="">
+                            </div>
+                            <div class="customer-image">
+                                <img src="images/collections/customer/brand-4.png" alt="">
+                            </div>
                         </div>
-                        <div class="customer-image">
-                            <img src="images/collections/customer/brand-2.png" alt="">
-                        </div>
-                        <div class="customer-image">
-                            <img src="images/collections/customer/brand-3.png" alt="">
-                        </div>
-                        <div class="customer-image">
-                            <img src="images/collections/customer/brand-4.png" alt="">
-                        </div>
+
+                        <span class="arrow prev"><img src="images/arrows/prev-arrow.png"/></span>
+                        <span class="arrow next"><img src="images/arrows/next-arrow.png"/></span>
                     </div>
                 </div>
             </div>
@@ -418,7 +466,7 @@
                     <h2>News</h2>
                     <div class="content-calendar">
                         <div class="calendar-item">
-                            <img src="images/posts/1.jpg" alt="">
+                            <a href="#"><img src="images/posts/1.jpg" alt=""></a>
                             <div class="calendar-info">
                                 <div class="date">
                                     <h2>26</h2>
@@ -432,7 +480,7 @@
                             </div>
                         </div>
                         <div class="calendar-item">
-                            <img src="images/posts/2.jpg" alt="">
+                            <a href="#"><img src="images/posts/2.jpg" alt=""></a>
                             <div class="calendar-info">
                                 <div class="date">
                                     <h2>18</h2>

@@ -33,13 +33,24 @@
 }
 
 .sliders {
+    overflow: hidden;
     position: relative;
 }
 
+.slider-item {
+    position: relative;
+    width: 100%;    
+}
+
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
 .sliders img {
-    width: 100%;
-    background-size: cover; /* Растягивает изображение на всю ширину контейнера */
-    background-position: center; /* Центрирует изображение по центру */
+    min-width: 100%;    
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
 }
 
