@@ -8,6 +8,8 @@
 @import '/styles/footer.css';
 @import '/styles/searchJS.css';
 @import '/styles/customers.css';
+@import '/styles/container.css';
+@import '/styles/divider.css';
 
 html {
     overflow-x: hidden;
@@ -24,16 +26,6 @@ body {
     font-family: "Afacad Flux", sans-serif;
 }
 
-.container {
-        min-width: 1170px;
-}
-
-@media (min-width: 768px) and (max-width: 992px) {
-    .container {
-        min-width: 970px;
-    }
-}
-
 @media (max-width: 992px) {    
     .news .subscribe-form,
     .news .calendar .content-calendar,
@@ -41,28 +33,6 @@ body {
         flex-direction: column;
         row-gap: 20px;
     }    
-}
-
-@media (min-width: 500px) and (max-width: 768px) {
-    .container {
-        min-width: 550px;
-    }
-}
-
-.divider {
-    display: block;
-    margin: 25px 0;
-    line-height: 1;    
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: var(--text-color);
-    opacity: .5;
-}
-
-.divider:not(.horizontal) {
-    height: 1px;
-    border-top: 1px solid #e1e1e1;
 }
 
 .news {

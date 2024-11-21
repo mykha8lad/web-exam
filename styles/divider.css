@@ -1,0 +1,15 @@
+.divider {
+    display: block;
+    margin: 25px 0;
+    line-height: 1;    
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-color);
+    opacity: .5;
+}
+
+.divider:not(.horizontal) {
+    height: 1px;
+    border-top: 1px solid #e1e1e1;
+}

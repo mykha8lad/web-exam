@@ -1,0 +1,9 @@
+@import '/styles/container.css';
+@import '/styles/header.css';
+@import '/styles/searchJS.css';
+@import '/styles/divider.css';
+
+html {
+    margin: 0;
+    padding: 0;
+}

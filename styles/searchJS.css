@@ -1,11 +1,11 @@
 .search-container {
     position: relative;
-    display: inline-block;
+    display: inline-block;    
 }
 #search-bar {
     display: none;
     width: 200px;
-    padding: 5px;
+    padding: 5px;        
 }
 #suggestions {
     display: none;
@@ -25,7 +25,7 @@
     list-style-type: none;    
 }
 #suggestions li:hover {
-    background-color: #f0f0f0;
+    background-color: #f0f0f0;    
 }
 .search-icon {
     cursor: pointer;
