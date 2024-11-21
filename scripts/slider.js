@@ -1,4 +1,3 @@
-const sliders = document.querySelector('.sliders');
 const carouselSlide = document.querySelector('.carousel-slide');
 const carouselItems = document.querySelectorAll('.slider-item');
 
