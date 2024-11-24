@@ -10,25 +10,21 @@ let currentIndex = 0;
 const sloganElement = document.getElementById('slogan');
 
 function showSlogan() {
-    // Устанавливаем текст текущего слогана
     sloganElement.textContent = slogans[currentIndex];
-    sloganElement.classList.add('visible'); // Плавное появление
-
-    // Убираем видимость через 4 секунды
+    sloganElement.classList.add('visible');
+    
     setTimeout(() => {
-        sloganElement.classList.remove('visible'); // Плавное исчезновение
-        currentIndex = (currentIndex + 1) % slogans.length; // Следующий слоган
-    }, 5000); // 5 секунд видимости текста
+        sloganElement.classList.remove('visible');
+        currentIndex = (currentIndex + 1) % slogans.length;
+    }, 5000);
 }
 
 function rotateSlogans() {
-    showSlogan(); // Показать первый слоган
-
-    // Через 6 секунд показываем следующий
+    showSlogan();
+    
     setInterval(() => {
         showSlogan();
-    }, 6000); // 6 секунд полный цикл (5 на экран + 1 секунда исчезновения)
+    }, 6000);
 }
 
-// Запускаем ротацию при загрузке страницы
 rotateSlogans();

@@ -5,266 +5,900 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link rel="shortcut icon" href="/images/icon.jpg" type="image/x-icon">
-    <link rel="stylesheet" href="/styles/general-page-styles.css">
-    <script src="/scripts/search.js" defer></script>
-    <script src="/scripts/writingTextLoop.js" defer></script>
-    <script src="/scripts/sloganCarousel.js" defer></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">    
+    <link rel="stylesheet" href="/general-page.css">
+    <link rel="shortcut icon" href="/images/icon.jpg" type="image/x-icon">    
+    <script src="scripts/search.js" defer type="module"></script>
+    <script src="scripts/slider.js" defer></script>
+    <script src="scripts/customers-slider.js" defer></script>
+    <script src="scripts/counter.js" defer></script>    
     <title>Hosoren | Online Shop</title>
 </head>
 <body>
-    <div class="container">
-        <header class="header">
-            <div class="logo">
-                <img src="images/logo.png" alt="logo">
-            </div>
-            <nav class="navigation">
-                <div class="general-navigation">
-                    <ul class="menu general-menu">
-                        <li class="menu-item">
-                            <a href="#">CLOTHING</a>
-                            <ul class="dropdown">
-                                <li><a href="#">T-shirts</a></li>
-                                <li><a href="#">Jackets</a></li>
-                                <li><a href="#">Jeans</a></li>
-                            </ul>
-                        </li>
-                        <li class="menu-item">
-                            <a href="#">SHOES</a>
-                            <ul class="dropdown">
-                                <li><a href="#">Sneakers</a></li>
-                                <li><a href="#">Boots</a></li>
-                                <li><a href="#">Sandals</a></li>
-                            </ul>
-                        </li>
-                        <li class="menu-item">
-                            <a href="#">ACCESSORIES</a>
-                            <ul class="dropdown">
-                                <li><a href="#">Watches</a></li>
-                                <li><a href="#">Bags</a></li>
-                                <li><a href="#">Hats</a></li>
-                                <li><a href="#">Gloves</a></li>
-                                <li><a href="#">Jewelry</a></li>
-                            </ul>
-                        </li>
-                        <li class="menu-item">
-                            <a href="#">BRAND</a>
-                            <ul class="dropdown">
-                                <li><a href="#">Adidas</a></li>
-                                <li><a href="#">Nike</a></li>
-                                <li><a href="#">Puma</a></li>
-                                <li><a href="#">Reebok</a></li>
-                                <li><a href="#">Under Armour</a></li>
-                                <li><a href="#">New Balance</a></li>
-                                <li><a href="#">ASICS</a></li>
-                                <li><a href="#">Fila</a></li>
-                                <li><a href="#">Converse</a></li>
-                                <li><a href="#">Vans</a></li>
-                            </ul>
-                        </li>
-                        <li class="menu-item">
-                            <a href="#">PAGES</a>
-                            <ul class="dropdown">
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">About Us</a></li>
-                                <li><a href="#">Services</a></li>
-                                <li><a href="#">Blog</a></li>
-                            </ul>
-                        </li>
-                        <li class="menu-item">
-                            <a href="#">ELEMENTS</a>
-                            <ul class="dropdown">
-                                <li><a href="#">Wishlist</a></li>
-                                <li><a href="#">Rating Stars</a></li>
-                                <li><a href="#">Newsletter Signup</a></li>
-                                <li><a href="#">Pagination</a></li>
-                                <li><a href="#">Product Filters</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <div class="search-container">
-                        <span class="search-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
-                            </svg>
-                        </span>
-                        <input type="text" id="search-bar" placeholder="Enter Name Product" autocomplete="off">                            
-                        <ul id="suggestions"></ul>
-                    </div>
-                </div>
-                <div class="user-tools">
-                    <ul class="menu">
-                        <li class="menu-item">                                
-                            <a href="#">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-                                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
-                                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
-                                </svg>                                    
-                            </a>                                
-                            <ul class="dropdown">
-                                <li><a href="/phpScripts/login.php">Login</a></li>
-                                <li><a href="/phpScripts/register.php">Registration</a></li>
-                                <li><a href="#">Support</a></li>                                    
-                            </ul>
-                        </li>
-                        <li class="menu-item">
-                            <a href="#">                                
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="#">                                                                    
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-basket-fill" viewBox="0 0 16 16">
-                                    <path d="M5.071 1.243a.5.5 0 0 1 .858.514L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H15v5a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V9H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 6h1.717zM3.5 10.5a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0z"/>
-                                </svg>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
-        <div class="main">
-            <div class="content">               
-                <header class="gp-header">
-                    <div class="header-text">                        
-                        <h1 class="typed-out">Hosoren Online Shop...</h1>
-                    </div>
-                </header>                
-                <p id="slogan" class="slogan"></p>
-                <div class="buttons">
-                    <p>Login to purchase!</p>
-                    <a href="/phpScripts/login.php"><button class="stylish-button">Login</button></a>
-                    <p>Or join us if you are not with us yet</p>
-                    <a href="/phpScripts/register.php"><button class="stylish-button">Registration</button></a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <footer class="footer">                        
+    
+    <div>
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-container">
-                    <div class="about">
-                        <h1>About hosoren</h1>
-                        <p>Lorem ipsum dolor sit amet isse potenti. Vesquam ante<br>aliquet lacusemper elit. Cras neque nulla, convallis non<br>commodo et, euismod nonsese.</p>
-                    </div>
-                    <div class="footer-column">
-                        <h1>We can help you?</h1>
-                        <div class="text-list">
-                            <p>Phone 1: 8 (495) 989—20—11</p>
-                            <p>Phone 2: 8 (800) 875—05—26</p>
-                            <p>Open - Close: 09:00-21:00</p>
-                            <p>Mail: hosoren@gmail.com</p>
+            <header class="header">
+                <div class="logo">
+                    <img src="images/logo.png" alt="logo">
+                </div>
+                <nav class="navigation">
+                    <div class="general-navigation">
+                        <ul class="menu general-menu">
+                            <li class="menu-item">
+                                <a href="#">CLOTHING</a>
+                                <ul class="dropdown">
+                                    <li><a href="#">T-shirts</a></li>
+                                    <li><a href="#">Jackets</a></li>
+                                    <li><a href="#">Jeans</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#">SHOES</a>
+                                <ul class="dropdown">
+                                    <li><a href="#">Sneakers</a></li>
+                                    <li><a href="#">Boots</a></li>
+                                    <li><a href="#">Sandals</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#">ACCESSORIES</a>
+                                <ul class="dropdown">
+                                    <li><a href="#">Watches</a></li>
+                                    <li><a href="#">Bags</a></li>
+                                    <li><a href="#">Hats</a></li>
+                                    <li><a href="#">Gloves</a></li>
+                                    <li><a href="#">Jewelry</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#">BRAND</a>
+                                <ul class="dropdown">
+                                    <li><a href="#">Adidas</a></li>
+                                    <li><a href="#">Nike</a></li>
+                                    <li><a href="#">Puma</a></li>
+                                    <li><a href="#">Reebok</a></li>
+                                    <li><a href="#">Under Armour</a></li>
+                                    <li><a href="#">New Balance</a></li>
+                                    <li><a href="#">ASICS</a></li>
+                                    <li><a href="#">Fila</a></li>
+                                    <li><a href="#">Converse</a></li>
+                                    <li><a href="#">Vans</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#">PAGES</a>
+                                <ul class="dropdown">
+                                    <li><a href="#">Home</a></li>
+                                    <li><a href="#">About Us</a></li>
+                                    <li><a href="#">Services</a></li>
+                                    <li><a href="#">Blog</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#">ELEMENTS</a>
+                                <ul class="dropdown">
+                                    <li><a href="#">Wishlist</a></li>
+                                    <li><a href="#">Rating Stars</a></li>
+                                    <li><a href="#">Newsletter Signup</a></li>
+                                    <li><a href="#">Pagination</a></li>
+                                    <li><a href="#">Product Filters</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div class="search-container">
+                            <span class="search-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                                </svg>
+                            </span>
+                            <input type="text" id="search-bar" placeholder="Enter Name Product" autocomplete="off">                            
+                            <ul id="suggestions"></ul>
                         </div>
                     </div>
-                </div>
-                <div class="footer-container footer-column">
-                    <h1>Shopping</h1>
-                    <div class="text-list">
-                        <a href="#">Your Cart</a>
-                        <a href="#">Your Orders</a>
-                        <a href="#">Compared Items</a>
-                        <a href="#">Wishlist Items</a>
-                        <a href="#">Shipping Detail</a>
+                    <div class="user-tools">
+                        <ul class="menu">
+                            <li class="menu-item">                                
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                                    </svg>                                    
+                                </a>                                
+                                <ul class="dropdown">
+                                    <li><a href="#">My Profile</a></li>
+                                    <li><a href="#">Order History</a></li>
+                                    <li><a href="#">Support</a></li>                                    
+                                    <li><a href="#">Logout</a></li>                                    
+                                </ul>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#">
+                                    <span id="favourite-counter">0</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#">                                    
+                                    <span id="cart-counter">0</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-basket-fill" viewBox="0 0 16 16">
+                                        <path d="M5.071 1.243a.5.5 0 0 1 .858.514L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H15v5a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V9H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 6h1.717zM3.5 10.5a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0z"/>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+        </div>
+
+        <div class="sliders">
+            <div class="carousel-slide">
+                <div class="slider-item">
+                    <img src="images/sliders/1.jpg" alt="slide4">
+                    <div class="overlay">
+                        <p>The shoes for summer</p>
+                        <h1>Shoes Vans<br>$160.00</h1>
+                        <button class="btn">Shop Now</button>
+                    </div>
+                </div>                
+                <div class="slider-item">
+                    <img src="images/sliders/2.jpg" alt="slide4">
+                    <div class="overlay">
+                        <p>New fashion for winter</p>
+                        <h1>New Jacket<br>Only $60</h1>
+                        <button class="btn">Shop Now</button>
                     </div>
                 </div>
-                <div class="footer-container footer-column">
-                    <h1>More link</h1>
-                    <div class="text-list">
-                        <a href="#">Blog</a>
-                        <a href="#">Gift Center</a>
-                        <a href="#">Buying Guides</a>
-                        <a href="#">New Arrivals</a>
-                        <a href="#">Clearance</a>                                                                                                                
+                <div class="slider-item">
+                    <img src="images/sliders/3.jpg" alt="slide4">
+                    <div class="overlay">
+                        <p>New t-shirt</p>
+                        <h1>Vintage Raglan</h1>
+                        <button class="btn">Shop Now</button>
                     </div>
                 </div>
-                <div class="footer-container">
-                    <div class="social-payment">
-                        <div class="icon-column">
-                            <h1>Are you like me</h1>
-                            <div class="icon-row">
-                                <a href="#">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" x="0px" y="0px" width="22" height="22" viewBox="0 0 50 50">
-                                        <path d="M 50.0625 10.4375 C 48.214844 11.257813 46.234375 11.808594 44.152344 12.058594 C 46.277344 10.785156 47.910156 8.769531 48.675781 6.371094 C 46.691406 7.546875 44.484375 8.402344 42.144531 8.863281 C 40.269531 6.863281 37.597656 5.617188 34.640625 5.617188 C 28.960938 5.617188 24.355469 10.21875 24.355469 15.898438 C 24.355469 16.703125 24.449219 17.488281 24.625 18.242188 C 16.078125 17.8125 8.503906 13.71875 3.429688 7.496094 C 2.542969 9.019531 2.039063 10.785156 2.039063 12.667969 C 2.039063 16.234375 3.851563 19.382813 6.613281 21.230469 C 4.925781 21.175781 3.339844 20.710938 1.953125 19.941406 C 1.953125 19.984375 1.953125 20.027344 1.953125 20.070313 C 1.953125 25.054688 5.5 29.207031 10.199219 30.15625 C 9.339844 30.390625 8.429688 30.515625 7.492188 30.515625 C 6.828125 30.515625 6.183594 30.453125 5.554688 30.328125 C 6.867188 34.410156 10.664063 37.390625 15.160156 37.472656 C 11.644531 40.230469 7.210938 41.871094 2.390625 41.871094 C 1.558594 41.871094 0.742188 41.824219 -0.0585938 41.726563 C 4.488281 44.648438 9.894531 46.347656 15.703125 46.347656 C 34.617188 46.347656 44.960938 30.679688 44.960938 17.09375 C 44.960938 16.648438 44.949219 16.199219 44.933594 15.761719 C 46.941406 14.3125 48.683594 12.5 50.0625 10.4375 Z"></path>
-                                    </svg>
-                                </a>                            
-                                <a href="#">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" x="0px" y="0px" width="22" height="22" viewBox="0 0 50 50">
-                                        <path d="M25,3C12.85,3,3,12.85,3,25c0,11.03,8.125,20.137,18.712,21.728V30.831h-5.443v-5.783h5.443v-3.848 c0-6.371,3.104-9.168,8.399-9.168c2.536,0,3.877,0.188,4.512,0.274v5.048h-3.612c-2.248,0-3.033,2.131-3.033,4.533v3.161h6.588 l-0.894,5.783h-5.694v15.944C38.716,45.318,47,36.137,47,25C47,12.85,37.15,3,25,3z"></path>
-                                    </svg>
-                                </a>
-                                <a href="#">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" x="0px" y="0px" width="22" height="22" viewBox="0 0 24 24">
-                                        <path d="M 2.1875 0 C 0.988281 0 0 0.988281 0 2.1875 L 0 21.8125 C 0 23.011719 0.988281 24 2.1875 24 L 21.8125 24 C 23.011719 24 24 23.011719 24 21.8125 L 24 2.1875 C 24 0.988281 23.011719 0 21.8125 0 Z M 9.1875 3.90625 L 13.59375 3.90625 L 12.1875 4.59375 L 11 4.59375 C 11.5 5.09375 12.5 5.898438 12.5 7.5 C 12.5 9.101563 11.585938 9.800781 10.6875 10.5 C 10.386719 10.800781 10.09375 11.101563 10.09375 11.5 C 10.09375 12 10.386719 12.207031 10.6875 12.40625 L 11.5 13 C 12.398438 13.800781 13.3125 14.5 13.3125 16 C 13.3125 18 11.289063 20 7.6875 20 C 4.585938 20 3.09375 18.5 3.09375 17 C 3.09375 16.199219 3.511719 15.207031 4.8125 14.40625 C 6.113281 13.605469 7.90625 13.507813 8.90625 13.40625 C 8.605469 13.007813 8.3125 12.601563 8.3125 12 C 8.3125 11.601563 8.398438 11.386719 8.5 11.1875 L 7.8125 11.1875 C 5.3125 11.289063 4 9.605469 4 7.90625 C 4 6.90625 4.507813 5.792969 5.40625 5.09375 C 6.605469 4.09375 8.085938 3.90625 9.1875 3.90625 Z M 7.90625 4.59375 C 7.304688 4.59375 6.707031 4.914063 6.40625 5.3125 C 6.007813 5.8125 5.90625 6.40625 5.90625 6.90625 C 5.90625 8.304688 6.695313 10.6875 8.59375 10.6875 C 9.09375 10.6875 9.695313 10.394531 10.09375 10.09375 C 10.59375 9.59375 10.59375 8.894531 10.59375 8.59375 C 10.59375 6.992188 9.707031 4.59375 7.90625 4.59375 Z M 17 8 L 19 8 L 19 11 L 22 11 L 22 13 L 19 13 L 19 16 L 17 16 L 17 13 L 14 13 L 14 11 L 17 11 Z M 8.90625 14.09375 C 8.707031 14.09375 7.492188 14.105469 6.59375 14.40625 C 6.09375 14.605469 4.8125 15.09375 4.8125 16.59375 C 4.8125 18.09375 6.292969 19.1875 8.59375 19.1875 C 10.695313 19.1875 11.8125 18.207031 11.8125 16.90625 C 11.8125 15.804688 11.101563 15.195313 9.5 14.09375 Z"></path>
-                                    </svg>
-                                </a>                            
-                                <a href="#">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" x="0px" y="0px" width="22" height="22" viewBox="0 0 50 50">
-                                        <path d="M25,2C12.3178711,2,2,12.3178711,2,25c0,9.8841553,6.2675781,18.3302612,15.036377,21.5769653	c-0.2525635-2.2515869-0.2129517-5.9390259,0.2037964-7.7243652c0.3902588-1.677002,2.5212402-10.6871338,2.5212402-10.6871338	s-0.6433105-1.2883301-0.6433105-3.1911011c0-2.9901733,1.7324219-5.2211914,3.8898315-5.2211914	c1.8349609,0,2.7197876,1.3776245,2.7197876,3.0281982c0,1.8457031-1.1734619,4.6026611-1.78125,7.1578369	c-0.506897,2.1409302,1.0733643,3.8865356,3.1836548,3.8865356c3.821228,0,6.7584839-4.0296021,6.7584839-9.8453369	c0-5.147583-3.697998-8.7471924-8.9795532-8.7471924c-6.1167603,0-9.7072754,4.588562-9.7072754,9.3309937	c0,1.8473511,0.7111816,3.8286743,1.6000977,4.9069824c0.175293,0.2133179,0.2009277,0.3994141,0.1488647,0.6160278	c-0.1629028,0.678894-0.5250854,2.1392822-0.5970459,2.4385986c-0.0934448,0.3944702-0.3117676,0.4763184-0.7186279,0.2869263	c-2.685791-1.2503052-4.364502-5.1756592-4.364502-8.3295898c0-6.7815552,4.9268188-13.0108032,14.206543-13.0108032	c7.4588623,0,13.2547607,5.3138428,13.2547607,12.4179077c0,7.4100342-4.6729126,13.3729858-11.1568604,13.3729858	c-2.178894,0-4.2263794-1.132019-4.9267578-2.4691772c0,0-1.0783081,4.1048584-1.3404541,5.1112061	c-0.4524536,1.7404175-2.3892822,5.3460083-3.3615723,6.9837036C20.1704712,47.6074829,22.5397949,48,25,48	c12.6826172,0,23-10.3173828,23-23C48,12.3178711,37.6826172,2,25,2z"></path>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="icon-column">
-                            <h1>Payment accept</h1>
-                            <div class="icon-row">
-                                <a href="#">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" x="0px" y="0px" width="22" height="22" viewBox="0 0 50 50">
-                                        <path d="M 11.40625 2 C 10.40625 2 9.511719 2.6875 9.3125 3.6875 C 9.3125 3.6875 3.414063 30.695313 2.3125 36.09375 C 2.113281 37.195313 2.386719 37.789063 2.6875 38.1875 C 3.085938 38.6875 3.699219 39 4.5 39 L 12 39 L 17.90625 11.8125 C 18.105469 10.8125 19.011719 9 21.8125 9 L 38 9 C 36.601563 4.398438 32.105469 2 27.90625 2 Z M 22 11.09375 L 20.40625 11.40625 C 20.105469 11.605469 19.914063 12.011719 19.8125 12.3125 L 17.40625 23.5 C 18.105469 23.199219 18.792969 23.09375 19.59375 23.09375 L 26.8125 23.09375 C 33.210938 23.09375 36.800781 20.507813 38 14.90625 C 38.199219 13.90625 38.3125 13.113281 38.3125 12.3125 L 38.1875 11.1875 L 38.1875 11.09375 Z M 40.09375 11.3125 L 40.1875 12 C 40.289063 13 40.105469 13.894531 39.90625 15.09375 C 38.507813 21.59375 33.988281 24.90625 26.6875 24.90625 L 19.5 24.90625 C 17.898438 24.90625 16.800781 25.605469 16.5 26.90625 C 16.101563 28.707031 12.601563 45.199219 12.5 45.5 C 12.398438 46 12.507813 46.6875 12.90625 47.1875 C 13.207031 47.585938 13.6875 48 14.6875 48 L 22.6875 48 C 23.6875 48 24.613281 47.289063 24.8125 46.1875 C 25.710938 42.386719 26.898438 36.613281 27 36.3125 C 27 36.210938 27.09375 36 27.09375 36 L 32.40625 36 C 40.207031 36 46.101563 31.3125 47.5 23.8125 C 48.5 19.210938 47.207031 16.289063 45.90625 14.6875 C 44.105469 12.386719 40.792969 11.3125 40.09375 11.3125 Z"></path>
-                                    </svg>
-                                </a>
-                                <a href="#">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" x="0px" y="0px" width="22" height="22" viewBox="0 0 50 50">
-                                        <path d="M 5 7 C 2.242188 7 0 9.242188 0 12 L 0 38 C 0 40.757813 2.242188 43 5 43 L 45 43 C 47.757813 43 50 40.757813 50 38 L 50 12 C 50 9.242188 47.757813 7 45 7 Z M 29.6875 19.40625 C 31.050781 19.40625 32.46875 19.96875 32.46875 19.96875 L 31.96875 22.40625 C 31.96875 22.40625 30.890625 21.6875 29.9375 21.6875 C 28.46875 21.6875 27.9375 22.167969 27.9375 22.8125 C 27.9375 24.074219 32.03125 24.296875 32.03125 27.125 C 32.03125 29.476563 29.113281 31.09375 27 31.09375 C 24.886719 31.09375 23.78125 30.46875 23.78125 30.46875 L 24.3125 28.09375 C 24.3125 28.09375 25.417969 28.75 27.125 28.75 C 28.828125 28.75 29.0625 28.023438 29.0625 27.71875 C 29.0625 25.914063 25 26.417969 25 22.90625 C 25 20.964844 26.585938 19.40625 29.6875 19.40625 Z M 16.46875 19.625 L 19.625 19.625 L 15.125 30.75 L 11.875 30.75 L 9.5 21.75 C 9.5 21.75 11.996094 23.023438 13.53125 26.46875 C 13.597656 26.886719 13.78125 27.5625 13.78125 27.5625 Z M 20.78125 19.625 L 23.78125 19.625 L 22 30.75 L 19.03125 30.75 Z M 36.8125 19.625 L 39.90625 19.625 L 42.1875 30.75 L 39.5 30.75 L 39.1875 29.15625 L 35.5 29.15625 L 34.90625 30.75 L 31.96875 30.75 Z M 6.25 19.65625 L 10.8125 19.65625 C 11.976563 19.65625 12.40625 20.75 12.40625 20.75 L 13.40625 25.8125 C 12.054688 21.453125 6.25 19.65625 6.25 19.65625 Z M 37.9375 22.84375 L 36.3125 27.03125 L 38.75 27.03125 Z"></path>
-                                    </svg>
-                                </a>
-                                <a href="#">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" x="0px" y="0px" width="22" height="22" viewBox="0 0 50 50">
-                                        <path d="M 5 7 C 2.242188 7 0 9.242188 0 12 L 0 38 C 0 40.757813 2.242188 43 5 43 L 45 43 C 47.757813 43 50 40.757813 50 38 L 50 12 C 50 9.242188 47.757813 7 45 7 Z M 8.5625 19.90625 L 11.34375 19.90625 L 15 28.09375 L 15 19.90625 L 18.28125 19.90625 L 20.84375 25.625 L 23.40625 19.90625 L 26.75 19.90625 L 26.75 28.40625 L 24.65625 28.40625 L 24.65625 22.1875 L 21.8125 28.40625 L 19.90625 28.40625 L 17.09375 22.09375 L 17.09375 28.40625 L 12.875 28.40625 L 12.0625 26.53125 L 7.875 26.53125 L 7.0625 28.40625 L 4.84375 28.40625 Z M 29.5 19.90625 L 37.75 19.90625 L 40.0625 22.5625 L 42.46875 19.90625 L 45.125 19.90625 L 41.375 24.0625 L 45.125 28.4375 L 42.46875 28.4375 L 40 25.59375 L 37.46875 28.40625 L 29.5 28.40625 Z M 9.90625 21.6875 L 8.65625 24.6875 L 11.21875 24.6875 Z M 31.5625 21.71875 L 31.5625 23.3125 L 36.1875 23.3125 L 36.1875 24.9375 L 31.5625 24.9375 L 31.5625 26.625 L 36.40625 26.625 L 38.6875 24.0625 L 36.65625 21.75 Z"></path>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
+                <div class="slider-item">
+                    <img src="images/sliders/4.jpg" alt="slide4">
+                    <div class="overlay">
+                        <p>What`s trending</p>
+                        <h1>Look book<br>Fashion 2015</h1>
+                        <button class="btn">View Now</button>
                     </div>
-                </div>
+                </div>                
             </div>
         </div>
-        <div class="footer-info">
+
+        <div class="container">
+            <section class="secondary-info">
+                <div class="secondary-info-item">
+                    <img src="images/icons/icons8-dollar-50.png" class="secondary-info-icon" alt="">
+                    <p>100% Money back<br><span>Guarantee</span></p>
+                </div>
+                <div class="secondary-info-item">
+                    <img src="images/icons/icons8-car-48.png" class="secondary-info-icon" alt="">
+                    <p>Free shipping<br><span>On order over 500$</span></p>  
+                </div>
+                <div class="secondary-info-item">
+                      <img src="images/icons/icons8-phone-50.png" class="secondary-info-icon" alt="">
+                    <p>24-hour<br><span>active support</span></p> 
+                </div>
+            </section>
+        </div>
+        
+        <div class="container">
+            <div class="divider">
+            </div>
+        </div>
+
+        <div class="container">
+            <section class="collections">
+                <div class="row-collection">
+                    <div class="index-1">
+                        <img src="images/collections/index-1/clothing.jpg" alt="">
+                        <div class="overlay-collection">
+                            <h1>Clothing</h1>
+                            <p>At vero eos et accusamus et iusto odio dignissimosmus voluptatum deleniti</p>
+                            <button>View All</button>
+                        </div>
+                    </div>                    
+                    <div class="collection">
+                        <a href="#"><img src="images/collections/clothing/1.jpg" alt=""></a>
+                        <div class="description">
+                            <a href="#" class="title">Goodale Rutledge Navy/White</a>
+                            <span>Shirt</span>
+                            <p class="price">$120</p>
+                        </div>
+                        <div class="add-to-cart" id="add-to-cart-button">
+                            <div class="tools-container">
+                                <div class="add-to-cart-btn">                                    
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-basket-fill" viewBox="0 0 16 16">
+                                        <path d="M5.071 1.243a.5.5 0 0 1 .858.514L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H15v5a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V9H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 6h1.717zM3.5 10.5a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0z"/>
+                                    </svg>                                    
+                                </div>
+                                <div class="add-to-favourite-list">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                                        
+                    <div class="collection">
+                        <a href="#"><img src="images/collections/clothing/2.jpg" alt=""></a>
+                        <div class="description">
+                            <a href="#" class="title">Gin Lane Greenport Cotton Shirt</a>
+                            <span>Shirt</span>
+                            <p class="price">$60</p>
+                        </div>
+                        <div class="add-to-cart" id="add-to-cart-button">
+                            <div class="tools-container">
+                                <div class="add-to-cart-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-basket-fill" viewBox="0 0 16 16">
+                                        <path d="M5.071 1.243a.5.5 0 0 1 .858.514L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H15v5a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V9H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 6h1.717zM3.5 10.5a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0z"/>
+                                    </svg>
+                                </div>
+                                <div class="add-to-favourite-list">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                                
+                    <div class="collection dn">
+                        <a href="#"><img src="images/collections/clothing/3.jpg" alt=""></a>
+                        <div class="description">
+                            <a href="#" class="title">Gin Lane Greenport Cotton Shirt</a>
+                            <span>Shirt</span>
+                            <p class="price">$50</p>
+                        </div>
+                        <div class="add-to-cart" id="add-to-cart-button">
+                            <div class="tools-container">
+                                <div class="add-to-cart-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-basket-fill" viewBox="0 0 16 16">
+                                        <path d="M5.071 1.243a.5.5 0 0 1 .858.514L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H15v5a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V9H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 6h1.717zM3.5 10.5a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0z"/>
+                                    </svg>
+                                </div>
+                                <div class="add-to-favourite-list">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+                <div class="row-collection">                                                            
+                    <div class="collection dn">
+                        <a href="#"><img src="images/collections/shoes/1.jpg" alt=""></a>
+                        <div class="description">
+                            <a href="#" class="title">Gin Lane Greenport Cotton Shirt</a>
+                            <span>Shirt</span>
+                            <p class="price">$80</p>
+                        </div>
+                        <div class="add-to-cart" id="add-to-cart-button">
+                            <div class="tools-container">
+                                <div class="add-to-cart-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-basket-fill" viewBox="0 0 16 16">
+                                        <path d="M5.071 1.243a.5.5 0 0 1 .858.514L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H15v5a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V9H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 6h1.717zM3.5 10.5a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0z"/>
+                                    </svg>
+                                </div>
+                                <div class="add-to-favourite-list">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                                        
+                    <div class="collection">
+                        <a href="#"><img src="images/collections/shoes/2.jpg" alt=""></a>
+                        <div class="description">
+                            <a href="#" class="title">Goodale Rutledge Navy/White</a>
+                            <span>Shirt</span>
+                            <p class="price">$50</p>
+                        </div>
+                        <div class="add-to-cart" id="add-to-cart-button">
+                            <div class="tools-container">
+                                <div class="add-to-cart-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-basket-fill" viewBox="0 0 16 16">
+                                        <path d="M5.071 1.243a.5.5 0 0 1 .858.514L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H15v5a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V9H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 6h1.717zM3.5 10.5a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0z"/>
+                                    </svg>
+                                </div>
+                                <div class="add-to-favourite-list">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                                        
+                    <div class="collection">
+                        <a href="#"><img src="images/collections/shoes/3.jpg" alt=""></a>
+                        <div class="description">
+                            <a href="#" class="title">Gin Lane Greenport Cotton Shirt</a>
+                            <span>Shirt</span>
+                            <p class="price">$60</p>
+                        </div>
+                        <div class="add-to-cart" id="add-to-cart-button">
+                            <div class="tools-container">
+                                <div class="add-to-cart-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-basket-fill" viewBox="0 0 16 16">
+                                        <path d="M5.071 1.243a.5.5 0 0 1 .858.514L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H15v5a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V9H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 6h1.717zM3.5 10.5a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0z"/>
+                                    </svg>
+                                </div>
+                                <div class="add-to-favourite-list">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    
+                    <div class="index-1">
+                        <img src="images/collections/index-1/shoes.jpg" alt="">
+                        <div class="overlay-collection">
+                            <h1>Shoes</h1>
+                            <p>At vero eos et accusamus et iusto odio dignissimosmus voluptatum deleniti corrupti quos dolores</p>
+                            <button>View All</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row-collection">
+                    <div class="index-1">
+                        <img src="images/collections/index-1/accessories.jpg" alt="">
+                        <div class="overlay-collection">
+                            <h1>Accessories</h1>
+                            <p>At vero eos et accusamus et iusto odiovoluptatum deleniti corrupti quos dolores</p>
+                            <button>View All</button>
+                        </div>
+                    </div>
+                    <div class="collection">
+                        <a href="#"><img src="images/collections/accessories/1.jpg" alt=""></a>
+                        <div class="description">
+                            <a href="#" class="title">Gin Lane Greenport Cotton Shirt</a>
+                            <span>Shirt</span>
+                            <p class="price">$80</p>
+                        </div>
+                        <div class="add-to-cart" id="add-to-cart-button">
+                            <div class="tools-container">
+                                <div class="add-to-cart-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-basket-fill" viewBox="0 0 16 16">
+                                        <path d="M5.071 1.243a.5.5 0 0 1 .858.514L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H15v5a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V9H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 6h1.717zM3.5 10.5a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0z"/>
+                                    </svg>
+                                </div>
+                                <div class="add-to-favourite-list">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    
+                    <div class="collection">
+                        <a href="#"><img src="images/collections/accessories/2.jpg" alt=""></a>
+                        <div class="description">
+                            <a href="#" class="title">Goodale Rutledge Navy/White</a>
+                            <span>Shirt</span>
+                            <p class="price">$50</p>
+                        </div>
+                        <div class="add-to-cart" id="add-to-cart-button">
+                            <div class="tools-container">
+                                <div class="add-to-cart-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-basket-fill" viewBox="0 0 16 16">
+                                        <path d="M5.071 1.243a.5.5 0 0 1 .858.514L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H15v5a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V9H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 6h1.717zM3.5 10.5a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0z"/>
+                                    </svg>
+                                </div>
+                                <div class="add-to-favourite-list">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collection dn">
+                        <a href="#"><img src="images/collections/accessories/3.jpg" alt=""></a>
+                        <div class="description">
+                            <a href="#" class="title">Gin Lane Greenport Cotton Shirt</a>
+                            <span>Shirt</span>
+                            <p class="price">$60</p>
+                        </div>
+                        <div class="add-to-cart" id="add-to-cart-button">
+                            <div class="tools-container">
+                                <div class="add-to-cart-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-basket-fill" viewBox="0 0 16 16">
+                                        <path d="M5.071 1.243a.5.5 0 0 1 .858.514L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H15v5a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V9H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 6h1.717zM3.5 10.5a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0z"/>
+                                    </svg>
+                                </div>
+                                <div class="add-to-favourite-list">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <div class="container">
-                <div class="footer-info-content">
-                    <div class="copyright">
-                        <span>Copyright © 2015 Hosoren - All Rights Reserved.</span>
+                <div class="divider">
+                </div>
+            </div>
+
+            <section class="section">
+                <header class="header-section">
+                    <h1>What's Trending</h1>
+                    <p>All trend style for man</p>
+                </header>
+                <div class="content-row">                    
+                    <div class="content-item">
+                        <a href="#"><img src="images/collections/trending/1.jpg" alt=""></a>
+                        <p class="title cp">New Collection For Man</p>
                     </div>
-                    <div class="contact-lang-price">
-                        <div class="contact">
-                            <a href="#">Contact Us</a>
-                            <a href="#">Term of Use</a>
-                            <a href="#">Privacy Policy</a>
-                            <a href="#">Site Map</a>                               
+                    <div class="content-item">
+                        <a href="#"><img src="images/collections/trending/2.jpg" alt=""></a>
+                        <p class="title cp">New Trending Shop</p>
+                    </div>
+                    <div class="content-item">
+                        <a href="#"><img src="images/collections/trending/3.jpg" alt=""></a>
+                        <p class="title cp">New Fashion for Cafe Racer Boy</p>
+                    </div>
+                    <div class="content-item">
+                        <a href="#"><img src="images/collections/trending/4.jpg" alt=""></a>
+                        <p class="title cp">New Watch Style</p>
+                    </div>
+                </div>                
+            </section>
+
+            <div class="container">
+                <div class="divider">
+                </div>
+            </div>
+
+            <section class="section">
+                <header class="header-section">
+                    <h1>New Arrivals</h1>
+                </header>
+                <div class="content-row">                    
+                    <div class="collection">
+                        <a href="#"><img src="images/collections/arrivals/1.jpg" alt=""></a>
+                        <div class="description">
+                            <a href="#" class="title">Gin Lane Greenport Cotton Shirt</a>
+                            <span>Shirt</span>
+                            <p class="price">$80</p>
                         </div>
-                        <div class="lang-price">
-                            <div class="lang">
-                                <label for="language">Language: </label>
-                                <select name="languages" id="language">
-                                    <option value="eng">English</option>
-                                    <option value="ukr">Ukrainian</option>
-                                </select>
+                        <div class="add-to-cart" id="add-to-cart-button">
+                            <div class="tools-container">
+                                <div class="add-to-cart-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-basket-fill" viewBox="0 0 16 16">
+                                        <path d="M5.071 1.243a.5.5 0 0 1 .858.514L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H15v5a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V9H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 6h1.717zM3.5 10.5a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0z"/>
+                                    </svg>
+                                </div>
+                                <div class="add-to-favourite-list">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                    </svg>
+                                </div>
                             </div>
-                            <div class="footer-price">
-                                <label for="price">Language: </label>
-                                <select name="prices" id="price">
-                                    <option value="usd">USD</option>
-                                    <option value="uah">UAH</option>
-                                </select>
+                        </div>
+                    </div>
+                    <div class="collection">
+                        <a href="#"><img src="images/collections/arrivals/2.jpg" alt=""></a>
+                        <div class="description">
+                            <a href="#" class="title">Goodale Rutledge Navy/White</a>
+                            <span>Shirt</span>
+                            <p class="price">$50</p>
+                        </div>
+                        <div class="add-to-cart" id="add-to-cart-button">
+                            <div class="tools-container">
+                                <div class="add-to-cart-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-basket-fill" viewBox="0 0 16 16">
+                                        <path d="M5.071 1.243a.5.5 0 0 1 .858.514L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H15v5a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V9H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 6h1.717zM3.5 10.5a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0z"/>
+                                    </svg>
+                                </div>
+                                <div class="add-to-favourite-list">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collection">
+                        <a href="#"><img src="images/collections/arrivals/3.jpg" alt=""></a>
+                        <div class="description">
+                            <a href="#" class="title">Gin Lane Greenport Cotton Shirt</a>
+                            <span>Shirt</span>
+                            <p class="price">$60</p>
+                        </div>
+                        <div class="add-to-cart" id="add-to-cart-button">
+                            <div class="tools-container">
+                                <div class="add-to-cart-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-basket-fill" viewBox="0 0 16 16">
+                                        <path d="M5.071 1.243a.5.5 0 0 1 .858.514L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H15v5a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V9H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 6h1.717zM3.5 10.5a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0z"/>
+                                    </svg>
+                                </div>
+                                <div class="add-to-favourite-list">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collection">
+                        <a href="#"><img src="images/collections/arrivals/4.jpg" alt=""></a>
+                        <div class="description">
+                            <a href="#" class="title">Gin Lane Greenport Cotton Shirt</a>
+                            <span>Shirt</span>
+                            <p class="price">$50</p>
+                        </div>
+                        <div class="add-to-cart" id="add-to-cart-button">
+                            <div class="tools-container">
+                                <div class="add-to-cart-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-basket-fill" viewBox="0 0 16 16">
+                                        <path d="M5.071 1.243a.5.5 0 0 1 .858.514L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H15v5a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V9H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 6h1.717zM3.5 10.5a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0z"/>
+                                    </svg>
+                                </div>
+                                <div class="add-to-favourite-list">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+            </section>
+
+            <div class="container">
+                <div class="divider">
+                </div>
+            </div>
+
+            <section class="section">
+                <header class="header-section">
+                    <h1>Featured Items</h1>
+                </header>
+                <div class="content-row">                    
+                    <div class="collection">
+                        <a href="#"><img src="images/collections/featured/1.jpg" alt=""></a>
+                        <div class="description">
+                            <a href="#" class="title">Gin Lane Greenport Cotton Shirt</a>
+                            <span>Jackets</span>
+                            <p class="price">$260</p>
+                        </div>
+                        <div class="add-to-cart" id="add-to-cart-button">
+                            <div class="tools-container">
+                                <div class="add-to-cart-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-basket-fill" viewBox="0 0 16 16">
+                                        <path d="M5.071 1.243a.5.5 0 0 1 .858.514L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H15v5a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V9H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 6h1.717zM3.5 10.5a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0z"/>
+                                    </svg>
+                                </div>
+                                <div class="add-to-favourite-list">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collection">
+                        <a href="#"><img src="images/collections/featured/2.jpg" alt=""></a>
+                        <div class="description">
+                            <a href="#" class="title">Goodale Rutledge Navy/White</a>
+                            <span>Shorts</span>
+                            <p class="price">$150</p>
+                        </div>
+                        <div class="add-to-cart" id="add-to-cart-button">
+                            <div class="tools-container">
+                                <div class="add-to-cart-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-basket-fill" viewBox="0 0 16 16">
+                                        <path d="M5.071 1.243a.5.5 0 0 1 .858.514L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H15v5a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V9H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 6h1.717zM3.5 10.5a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0z"/>
+                                    </svg>
+                                </div>
+                                <div class="add-to-favourite-list">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collection">
+                        <a href="#"><img src="images/collections/featured/3.jpg" alt=""></a>
+                        <div class="description">
+                            <a href="#" class="title">Gin Lane Greenport Cotton Shirt</a>
+                            <span>Shirt</span>
+                            <p class="price">$60</p>
+                        </div>
+                        <div class="add-to-cart" id="add-to-cart-button">
+                            <div class="tools-container">
+                                <div class="add-to-cart-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-basket-fill" viewBox="0 0 16 16">
+                                        <path d="M5.071 1.243a.5.5 0 0 1 .858.514L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H15v5a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V9H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 6h1.717zM3.5 10.5a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0z"/>
+                                    </svg>
+                                </div>
+                                <div class="add-to-favourite-list">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collection">
+                        <a href="#"><img src="images/collections/featured/4.jpg" alt=""></a>
+                        <div class="description">
+                            <a href="#" class="title">Goodale Rutledge Navy/White</a>
+                            <span>Vests</span>
+                            <p class="price">$50 <span><del>$230</del></span></p>
+                        </div>
+                        <div class="add-to-cart" id="add-to-cart-button">
+                            <div class="tools-container">
+                                <div class="add-to-cart-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-basket-fill" viewBox="0 0 16 16">
+                                        <path d="M5.071 1.243a.5.5 0 0 1 .858.514L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H15v5a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V9H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 6h1.717zM3.5 10.5a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0z"/>
+                                    </svg>
+                                </div>
+                                <div class="add-to-favourite-list">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                
+                </div>                  
+                <button type="button" class="more-btn">View More Products</button>
+            </section>            
+            
+        </div>
+
+        <div class="customer">
+            <div class="container">
+                <div class="customer-content">
+                    <div class="customer-text">
+                        <h1 class="customer-title">Customer Say</h1>    
+                        <h3 class="customer-name">Natasha Roson</h3>
+                        <p class="customer-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum sunt, officia quos amet voluptatibus quam dolorum tenetur aperiam voluptatem quo totam accusantium?</p>
+                    </div>
+                    <div class="customer-images">
+                        <div class="customer-slider-wrapper">
+                            <div class="customer-image">
+                                <img src="images/collections/customer/brand-1.png" alt="">
+                            </div>
+                            <div class="customer-image">
+                                <img src="images/collections/customer/brand-2.png" alt="">
+                            </div>
+                            <div class="customer-image">
+                                <img src="images/collections/customer/brand-3.png" alt="">
+                            </div>
+                            <div class="customer-image">
+                                <img src="images/collections/customer/brand-4.png" alt="">
+                            </div>
+                            <div class="customer-image">
+                                <img src="images/collections/customer/brand-1.png" alt="">
+                            </div>
+                            <div class="customer-image">
+                                <img src="images/collections/customer/brand-2.png" alt="">
+                            </div>
+                            <div class="customer-image">
+                                <img src="images/collections/customer/brand-3.png" alt="">
+                            </div>
+                            <div class="customer-image">
+                                <img src="images/collections/customer/brand-4.png" alt="">
+                            </div>
+                        </div>
+
+                        <span class="arrow prev"><img src="images/arrows/prev-arrow.png"/></span>
+                        <span class="arrow next"><img src="images/arrows/next-arrow.png"/></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="news">                
+                <div class="calendar">
+                    <h2>News</h2>
+                    <div class="content-calendar">
+                        <div class="calendar-item">
+                            <a href="#"><img src="images/posts/1.jpg" alt=""></a>
+                            <div class="calendar-info">
+                                <div class="date">
+                                    <h2>26</h2>
+                                    <small>August</small>
+                                </div>
+                                <div class="calendar-description">
+                                    <h3 class="title">San Francisco Felt Pennant</h3>
+                                    <p>Lorem ipsum dolor of rew sit amet consectetur adipisicing elit.</p>
+                                    <a href="#">Read more</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="calendar-item">
+                            <a href="#"><img src="images/posts/2.jpg" alt=""></a>
+                            <div class="calendar-info">
+                                <div class="date">
+                                    <h2>18</h2>
+                                    <small>August</small>
+                                </div>
+                                <div class="calendar-description">
+                                    <h3 class="title">San Francisco Felt Pennant</h3>
+                                    <p>Lorem ipsum dolor of rew sit amet consectetur adipisicing elit.</p>
+                                    <a href="#">Read more</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="subscribe-form">
+                    <header>
+                        <h1>Subscribe<br>newsletter</h1>
+                    </header>
+                    <p>Lorem Ipsum is simply dummy text of the printing and<br>typesetting industry</p>
+                    <div class="email-form">
+                        <form>
+                            <input type="email" name="email" placeholder="Enter your email address" id="">
+                            <button>Subscribe email</button>
+                        </form>                        
+                    </div>
+                </div>
+
+                <div class="banners">
+                    <div class="banner">
+                        <a href="#">
+                            <img src="images/banners/home-banner-1.png" alt="">
+                        </a>
+                    </div>
+                    <div class="banner">
+                        <a href="#">
+                            <img src="images/banners/home-banner-2.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <a href="#" class="back-top-link" title="">
+                <div class="back-top">
+                    <span class="back-top-image">
+                        <img src="images/back-top.png" alt="">
+                    </span>
+                    <small>Back top top</small>
+                </div>
+            </a>                      
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-container">
+                        <div class="about">
+                            <h1>About hosoren</h1>
+                            <p>Lorem ipsum dolor sit amet isse potenti. Vesquam ante<br>aliquet lacusemper elit. Cras neque nulla, convallis non<br>commodo et, euismod nonsese.</p>
+                        </div>
+                        <div class="footer-column">
+                            <h1>We can help you?</h1>
+                            <div class="text-list">
+                                <p>Phone 1: 8 (495) 989—20—11</p>
+                                <p>Phone 2: 8 (800) 875—05—26</p>
+                                <p>Open - Close: 09:00-21:00</p>
+                                <p>Mail: hosoren@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-container footer-column">
+                        <h1>Shopping</h1>
+                        <div class="text-list">
+                            <a href="#">Your Cart</a>
+                            <a href="#">Your Orders</a>
+                            <a href="#">Compared Items</a>
+                            <a href="#">Wishlist Items</a>
+                            <a href="#">Shipping Detail</a>
+                        </div>
+                    </div>
+                    <div class="footer-container footer-column">
+                        <h1>More link</h1>
+                        <div class="text-list">
+                            <a href="#">Blog</a>
+                            <a href="#">Gift Center</a>
+                            <a href="#">Buying Guides</a>
+                            <a href="#">New Arrivals</a>
+                            <a href="#">Clearance</a>                                                                                                                
+                        </div>
+                    </div>
+                    <div class="footer-container">
+                        <div class="social-payment">
+                            <div class="icon-column">
+                                <h1>Are you like me</h1>
+                                <div class="icon-row">
+                                    <a href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" x="0px" y="0px" width="22" height="22" viewBox="0 0 50 50">
+                                            <path d="M 50.0625 10.4375 C 48.214844 11.257813 46.234375 11.808594 44.152344 12.058594 C 46.277344 10.785156 47.910156 8.769531 48.675781 6.371094 C 46.691406 7.546875 44.484375 8.402344 42.144531 8.863281 C 40.269531 6.863281 37.597656 5.617188 34.640625 5.617188 C 28.960938 5.617188 24.355469 10.21875 24.355469 15.898438 C 24.355469 16.703125 24.449219 17.488281 24.625 18.242188 C 16.078125 17.8125 8.503906 13.71875 3.429688 7.496094 C 2.542969 9.019531 2.039063 10.785156 2.039063 12.667969 C 2.039063 16.234375 3.851563 19.382813 6.613281 21.230469 C 4.925781 21.175781 3.339844 20.710938 1.953125 19.941406 C 1.953125 19.984375 1.953125 20.027344 1.953125 20.070313 C 1.953125 25.054688 5.5 29.207031 10.199219 30.15625 C 9.339844 30.390625 8.429688 30.515625 7.492188 30.515625 C 6.828125 30.515625 6.183594 30.453125 5.554688 30.328125 C 6.867188 34.410156 10.664063 37.390625 15.160156 37.472656 C 11.644531 40.230469 7.210938 41.871094 2.390625 41.871094 C 1.558594 41.871094 0.742188 41.824219 -0.0585938 41.726563 C 4.488281 44.648438 9.894531 46.347656 15.703125 46.347656 C 34.617188 46.347656 44.960938 30.679688 44.960938 17.09375 C 44.960938 16.648438 44.949219 16.199219 44.933594 15.761719 C 46.941406 14.3125 48.683594 12.5 50.0625 10.4375 Z"></path>
+                                        </svg>
+                                    </a>                            
+                                    <a href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" x="0px" y="0px" width="22" height="22" viewBox="0 0 50 50">
+                                            <path d="M25,3C12.85,3,3,12.85,3,25c0,11.03,8.125,20.137,18.712,21.728V30.831h-5.443v-5.783h5.443v-3.848 c0-6.371,3.104-9.168,8.399-9.168c2.536,0,3.877,0.188,4.512,0.274v5.048h-3.612c-2.248,0-3.033,2.131-3.033,4.533v3.161h6.588 l-0.894,5.783h-5.694v15.944C38.716,45.318,47,36.137,47,25C47,12.85,37.15,3,25,3z"></path>
+                                        </svg>
+                                    </a>
+                                    <a href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" x="0px" y="0px" width="22" height="22" viewBox="0 0 24 24">
+                                            <path d="M 2.1875 0 C 0.988281 0 0 0.988281 0 2.1875 L 0 21.8125 C 0 23.011719 0.988281 24 2.1875 24 L 21.8125 24 C 23.011719 24 24 23.011719 24 21.8125 L 24 2.1875 C 24 0.988281 23.011719 0 21.8125 0 Z M 9.1875 3.90625 L 13.59375 3.90625 L 12.1875 4.59375 L 11 4.59375 C 11.5 5.09375 12.5 5.898438 12.5 7.5 C 12.5 9.101563 11.585938 9.800781 10.6875 10.5 C 10.386719 10.800781 10.09375 11.101563 10.09375 11.5 C 10.09375 12 10.386719 12.207031 10.6875 12.40625 L 11.5 13 C 12.398438 13.800781 13.3125 14.5 13.3125 16 C 13.3125 18 11.289063 20 7.6875 20 C 4.585938 20 3.09375 18.5 3.09375 17 C 3.09375 16.199219 3.511719 15.207031 4.8125 14.40625 C 6.113281 13.605469 7.90625 13.507813 8.90625 13.40625 C 8.605469 13.007813 8.3125 12.601563 8.3125 12 C 8.3125 11.601563 8.398438 11.386719 8.5 11.1875 L 7.8125 11.1875 C 5.3125 11.289063 4 9.605469 4 7.90625 C 4 6.90625 4.507813 5.792969 5.40625 5.09375 C 6.605469 4.09375 8.085938 3.90625 9.1875 3.90625 Z M 7.90625 4.59375 C 7.304688 4.59375 6.707031 4.914063 6.40625 5.3125 C 6.007813 5.8125 5.90625 6.40625 5.90625 6.90625 C 5.90625 8.304688 6.695313 10.6875 8.59375 10.6875 C 9.09375 10.6875 9.695313 10.394531 10.09375 10.09375 C 10.59375 9.59375 10.59375 8.894531 10.59375 8.59375 C 10.59375 6.992188 9.707031 4.59375 7.90625 4.59375 Z M 17 8 L 19 8 L 19 11 L 22 11 L 22 13 L 19 13 L 19 16 L 17 16 L 17 13 L 14 13 L 14 11 L 17 11 Z M 8.90625 14.09375 C 8.707031 14.09375 7.492188 14.105469 6.59375 14.40625 C 6.09375 14.605469 4.8125 15.09375 4.8125 16.59375 C 4.8125 18.09375 6.292969 19.1875 8.59375 19.1875 C 10.695313 19.1875 11.8125 18.207031 11.8125 16.90625 C 11.8125 15.804688 11.101563 15.195313 9.5 14.09375 Z"></path>
+                                        </svg>
+                                    </a>                            
+                                    <a href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" x="0px" y="0px" width="22" height="22" viewBox="0 0 50 50">
+                                            <path d="M25,2C12.3178711,2,2,12.3178711,2,25c0,9.8841553,6.2675781,18.3302612,15.036377,21.5769653	c-0.2525635-2.2515869-0.2129517-5.9390259,0.2037964-7.7243652c0.3902588-1.677002,2.5212402-10.6871338,2.5212402-10.6871338	s-0.6433105-1.2883301-0.6433105-3.1911011c0-2.9901733,1.7324219-5.2211914,3.8898315-5.2211914	c1.8349609,0,2.7197876,1.3776245,2.7197876,3.0281982c0,1.8457031-1.1734619,4.6026611-1.78125,7.1578369	c-0.506897,2.1409302,1.0733643,3.8865356,3.1836548,3.8865356c3.821228,0,6.7584839-4.0296021,6.7584839-9.8453369	c0-5.147583-3.697998-8.7471924-8.9795532-8.7471924c-6.1167603,0-9.7072754,4.588562-9.7072754,9.3309937	c0,1.8473511,0.7111816,3.8286743,1.6000977,4.9069824c0.175293,0.2133179,0.2009277,0.3994141,0.1488647,0.6160278	c-0.1629028,0.678894-0.5250854,2.1392822-0.5970459,2.4385986c-0.0934448,0.3944702-0.3117676,0.4763184-0.7186279,0.2869263	c-2.685791-1.2503052-4.364502-5.1756592-4.364502-8.3295898c0-6.7815552,4.9268188-13.0108032,14.206543-13.0108032	c7.4588623,0,13.2547607,5.3138428,13.2547607,12.4179077c0,7.4100342-4.6729126,13.3729858-11.1568604,13.3729858	c-2.178894,0-4.2263794-1.132019-4.9267578-2.4691772c0,0-1.0783081,4.1048584-1.3404541,5.1112061	c-0.4524536,1.7404175-2.3892822,5.3460083-3.3615723,6.9837036C20.1704712,47.6074829,22.5397949,48,25,48	c12.6826172,0,23-10.3173828,23-23C48,12.3178711,37.6826172,2,25,2z"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="icon-column">
+                                <h1>Payment accept</h1>
+                                <div class="icon-row">
+                                    <a href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" x="0px" y="0px" width="22" height="22" viewBox="0 0 50 50">
+                                            <path d="M 11.40625 2 C 10.40625 2 9.511719 2.6875 9.3125 3.6875 C 9.3125 3.6875 3.414063 30.695313 2.3125 36.09375 C 2.113281 37.195313 2.386719 37.789063 2.6875 38.1875 C 3.085938 38.6875 3.699219 39 4.5 39 L 12 39 L 17.90625 11.8125 C 18.105469 10.8125 19.011719 9 21.8125 9 L 38 9 C 36.601563 4.398438 32.105469 2 27.90625 2 Z M 22 11.09375 L 20.40625 11.40625 C 20.105469 11.605469 19.914063 12.011719 19.8125 12.3125 L 17.40625 23.5 C 18.105469 23.199219 18.792969 23.09375 19.59375 23.09375 L 26.8125 23.09375 C 33.210938 23.09375 36.800781 20.507813 38 14.90625 C 38.199219 13.90625 38.3125 13.113281 38.3125 12.3125 L 38.1875 11.1875 L 38.1875 11.09375 Z M 40.09375 11.3125 L 40.1875 12 C 40.289063 13 40.105469 13.894531 39.90625 15.09375 C 38.507813 21.59375 33.988281 24.90625 26.6875 24.90625 L 19.5 24.90625 C 17.898438 24.90625 16.800781 25.605469 16.5 26.90625 C 16.101563 28.707031 12.601563 45.199219 12.5 45.5 C 12.398438 46 12.507813 46.6875 12.90625 47.1875 C 13.207031 47.585938 13.6875 48 14.6875 48 L 22.6875 48 C 23.6875 48 24.613281 47.289063 24.8125 46.1875 C 25.710938 42.386719 26.898438 36.613281 27 36.3125 C 27 36.210938 27.09375 36 27.09375 36 L 32.40625 36 C 40.207031 36 46.101563 31.3125 47.5 23.8125 C 48.5 19.210938 47.207031 16.289063 45.90625 14.6875 C 44.105469 12.386719 40.792969 11.3125 40.09375 11.3125 Z"></path>
+                                        </svg>
+                                    </a>
+                                    <a href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" x="0px" y="0px" width="22" height="22" viewBox="0 0 50 50">
+                                            <path d="M 5 7 C 2.242188 7 0 9.242188 0 12 L 0 38 C 0 40.757813 2.242188 43 5 43 L 45 43 C 47.757813 43 50 40.757813 50 38 L 50 12 C 50 9.242188 47.757813 7 45 7 Z M 29.6875 19.40625 C 31.050781 19.40625 32.46875 19.96875 32.46875 19.96875 L 31.96875 22.40625 C 31.96875 22.40625 30.890625 21.6875 29.9375 21.6875 C 28.46875 21.6875 27.9375 22.167969 27.9375 22.8125 C 27.9375 24.074219 32.03125 24.296875 32.03125 27.125 C 32.03125 29.476563 29.113281 31.09375 27 31.09375 C 24.886719 31.09375 23.78125 30.46875 23.78125 30.46875 L 24.3125 28.09375 C 24.3125 28.09375 25.417969 28.75 27.125 28.75 C 28.828125 28.75 29.0625 28.023438 29.0625 27.71875 C 29.0625 25.914063 25 26.417969 25 22.90625 C 25 20.964844 26.585938 19.40625 29.6875 19.40625 Z M 16.46875 19.625 L 19.625 19.625 L 15.125 30.75 L 11.875 30.75 L 9.5 21.75 C 9.5 21.75 11.996094 23.023438 13.53125 26.46875 C 13.597656 26.886719 13.78125 27.5625 13.78125 27.5625 Z M 20.78125 19.625 L 23.78125 19.625 L 22 30.75 L 19.03125 30.75 Z M 36.8125 19.625 L 39.90625 19.625 L 42.1875 30.75 L 39.5 30.75 L 39.1875 29.15625 L 35.5 29.15625 L 34.90625 30.75 L 31.96875 30.75 Z M 6.25 19.65625 L 10.8125 19.65625 C 11.976563 19.65625 12.40625 20.75 12.40625 20.75 L 13.40625 25.8125 C 12.054688 21.453125 6.25 19.65625 6.25 19.65625 Z M 37.9375 22.84375 L 36.3125 27.03125 L 38.75 27.03125 Z"></path>
+                                        </svg>
+                                    </a>
+                                    <a href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" x="0px" y="0px" width="22" height="22" viewBox="0 0 50 50">
+                                            <path d="M 5 7 C 2.242188 7 0 9.242188 0 12 L 0 38 C 0 40.757813 2.242188 43 5 43 L 45 43 C 47.757813 43 50 40.757813 50 38 L 50 12 C 50 9.242188 47.757813 7 45 7 Z M 8.5625 19.90625 L 11.34375 19.90625 L 15 28.09375 L 15 19.90625 L 18.28125 19.90625 L 20.84375 25.625 L 23.40625 19.90625 L 26.75 19.90625 L 26.75 28.40625 L 24.65625 28.40625 L 24.65625 22.1875 L 21.8125 28.40625 L 19.90625 28.40625 L 17.09375 22.09375 L 17.09375 28.40625 L 12.875 28.40625 L 12.0625 26.53125 L 7.875 26.53125 L 7.0625 28.40625 L 4.84375 28.40625 Z M 29.5 19.90625 L 37.75 19.90625 L 40.0625 22.5625 L 42.46875 19.90625 L 45.125 19.90625 L 41.375 24.0625 L 45.125 28.4375 L 42.46875 28.4375 L 40 25.59375 L 37.46875 28.40625 L 29.5 28.40625 Z M 9.90625 21.6875 L 8.65625 24.6875 L 11.21875 24.6875 Z M 31.5625 21.71875 L 31.5625 23.3125 L 36.1875 23.3125 L 36.1875 24.9375 L 31.5625 24.9375 L 31.5625 26.625 L 36.40625 26.625 L 38.6875 24.0625 L 36.65625 21.75 Z"></path>
+                                        </svg>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </footer>
+            <div class="footer-info">
+                <div class="container">
+                    <div class="footer-info-content">
+                        <div class="copyright">
+                            <span>Copyright © 2015 Hosoren - All Rights Reserved.</span>
+                        </div>
+                        <div class="contact-lang-price">
+                            <div class="contact">
+                                <a href="#">Contact Us</a>
+                                <a href="#">Term of Use</a>
+                                <a href="#">Privacy Policy</a>
+                                <a href="#">Site Map</a>                               
+                            </div>
+                            <div class="lang-price">
+                                <div class="lang">
+                                    <label for="language">Language: </label>
+                                    <select name="languages" id="language">
+                                        <option value="eng">English</option>
+                                        <option value="ukr">Ukrainian</option>
+                                    </select>
+                                </div>
+                                <div class="footer-price">
+                                    <label for="price">Language: </label>
+                                    <select name="prices" id="price">
+                                        <option value="usd">USD</option>
+                                        <option value="uah">UAH</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
 </body>
 </html>

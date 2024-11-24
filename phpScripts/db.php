@@ -1,8 +1,8 @@
 <?php
 $host = 'localhost';
 $dbname = 'user_management';
-$user = 'postgres'; // Укажите своего пользователя PostgreSQL
-$password = '8032069'; // Укажите свой пароль
+$user = 'postgres';
+$password = '8032069';
 
 try {
     $pdo = new PDO("pgsql:host=$host;dbname=$dbname", $user, $password);

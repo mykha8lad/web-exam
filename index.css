@@ -1,175 +1,110 @@
-@import '/styles/normalize.css';
-@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap');
-@import '/styles/header.css';
-@import '/styles/sliders.css';
-@import '/styles/secondary-info.css';
-@import '/styles/collections.css';
-@import '/styles/sections.css';
-@import '/styles/footer.css';
-@import '/styles/searchJS.css';
-@import '/styles/customers.css';
 @import '/styles/container.css';
-@import '/styles/divider.css';
-
-html {
-    overflow-x: hidden;
-}
+@import '/styles/header.css';
+@import '/styles/normalize.css';
+@import '/styles/searchJS.css';
+@import '/styles/footer.css';
 
 body {
     font-family: "Afacad Flux", sans-serif;
 }
 
-@media (max-width: 992px) {    
-    .news .subscribe-form,
-    .news .calendar .content-calendar,
-    .news .banners {
-        flex-direction: column;
-        row-gap: 20px;
-    }    
-}
-
-.news {
+.content {    
     display: flex;
     flex-direction: column;
-    margin: 60px 0;
-}
-
-.calendar {
-    display: flex;
-    flex-direction: column;
-}
-
-.calendar h2 {
-    margin: 0;
-    color: var(--text-color);
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 50px;
-}
-
-.content-calendar {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 50px;
-    column-gap: 40px;
-}
-
-.calendar-item {
-    display: flex;
-    flex-direction: row;
     align-items: center;
-    column-gap: 35px;
+    justify-content: space-between;
+    margin: 30px 0;
+    row-gap: 90px;
 }
 
-.calendar-item img {
-    width: 270px;
-    height: 207px;
+.header-text {
+    display: inline-block;
+    margin-top: 100px;
 }
 
-.calendar-info {
-    display: flex;
-    flex-direction: column;
-    row-gap: 25px;
-}
-
-.date {
-    display: flex;
-    flex-direction: row;
-    align-items: end;
-    column-gap: 10px;
-    margin-top: 0;
-}
-
-.date h2 {
-    font-size: 70px;
+.header-text h1 {
+    margin: 0;
     font-weight: 700;
-    margin: 0;
+    letter-spacing: 4px;    
 }
 
-.date small {
-    font-size: 22px;
-    margin-bottom: 10px;
-    font-weight: 500;
-    color: var(--description-text-color);
+.typed-out {
+    overflow: hidden;
+    border-right: .07em solid rgb(221, 144, 2);
+    white-space: nowrap;
+    margin-top: 10%;
+    font-size: 60px;        
+    animation: typing 1.5s steps(20, end) forwards, blinking 0.75s infinite;
+    width: 0;
 }
 
-.calendar-description {
-    display: flex;
-    flex-direction: column;     
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+@keyframes blinking {
+    from { border-color: transparent }
+    to { border-color: orange; } 
 }
 
-.calendar-description p {
-    color: var(--description-text-color);
-    font-size: 17px;    
-    line-height: 23px;
-    margin: 0;
+.slogan {
+    font-size: 24px;
+    color: #333;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    position: absolute;
+    margin-top: 40px;   
+    letter-spacing: 4px;  
 }
 
-.calendar-description a { 
-    color: var(--description-text-color);    
+.visible {
+    opacity: 1;
 }
 
-.calendar-description a:hover {
-    color: var(--hover-color);
-    text-decoration-color: var(--hover-color);
-    transition: color 0.2s ease-in-out;    
-}
-
-.subscribe-form {
-    margin: 60px 0;
-    background-color: var(--text-color);
+.stylish-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
     color: #fff;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 40px;    
-}
-
-.subscribe-form h1 {
+    background-color: #ffa200;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
     text-transform: uppercase;
-    line-height: 25px;
-    font-weight: 600;
-    font-size: 25px;
+    letter-spacing: 1.5px;
+    box-shadow: 0 8px 15px #ffa200a1;
+    transition: all 0.3s ease;
 }
 
-.subscribe-form p {
-    text-align: center;    
-    font-size: 17px;
-    margin-top: 13px;
+.stylish-button:hover {
+    background-color: #e69100;
+    box-shadow: 0 15px 20px #ffa200b2;
+    transform: translateY(-3px);
 }
 
-.email-form form {
+.stylish-button:active {
+    transform: translateY(1px);
+    box-shadow: 0 5px 10px #ffa200d5;
+}
+
+.buttons {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    column-gap: 10px;    
+    flex-direction: column;    
+    align-items: center;    
 }
 
-.email-form input {
-    width: 340px;
-    height: 40px;
-    padding: 0 15px;    
-    border: 0;
+.buttons button {
+    margin-top: 10px;
+    margin-bottom: 30px;
 }
 
-.email-form button {
-    background-color: var(--hover-color);
-    color: #fff;
-    padding: 11px 28px;
-    text-transform: uppercase;
-    font-size: 15px;
-    font-weight: bolder;
-    letter-spacing: 1px;
-    border: 0;    
+.buttons p {
+    margin: 0;  
+    font-size: 14px;  
 }
 
-.banners {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
+
+
 
 .back-top {            
     display: flex;

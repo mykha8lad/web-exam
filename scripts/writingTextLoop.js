@@ -1,14 +1,12 @@
 const typedOut = document.querySelector('.typed-out');
-const text = "Hosoren Online Shop..."; // Текст для печати
-const typingDuration = 1200; // Длительность печати текста (в миллисекундах)
-const holdDuration = 4000; // Время показа текста перед повтором (в миллисекундах)
+const text = "elcome to Hosoren!";
+const typingDuration = 1500;
+const holdDuration = 4000;
 
-function startTypingEffect() {
-    // Устанавливаем начальные условия
-    typedOut.textContent = "";
+function startTypingEffect() {    
+    typedOut.textContent = "W";
     typedOut.style.animation = `typing ${typingDuration / 1000}s steps(${text.length}, end) forwards, blinking .75s infinite`;
-
-    // Печатаем текст посимвольно через setTimeout
+    
     let charIndex = 0;
     const typingInterval = typingDuration / text.length;
     const typing = setInterval(() => {
@@ -16,15 +14,13 @@ function startTypingEffect() {
             typedOut.textContent += text[charIndex];
             charIndex++;
         } else {
-            clearInterval(typing);
-            // Ждем заданное время (holdDuration) перед сбросом
+            clearInterval(typing);           
             setTimeout(() => {
-                typedOut.textContent = ""; // Сброс текста
-                startTypingEffect(); // Перезапускаем эффект
+                typedOut.textContent = "";
+                startTypingEffect();
             }, holdDuration);
         }
     }, typingInterval);
 }
 
-// Запускаем эффект при загрузке
 startTypingEffect();

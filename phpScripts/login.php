@@ -3,18 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <link rel="stylesheet" href="/styles/login-register.css">
+    <link rel="shortcut icon" href="/images/icon.jpg" type="image/x-icon">
+    <title>Hosoren | Login</title>
 </head>
 <body>
-    <h2>Login</h2>
-    <form action="process_login.php" method="POST">
-        <label for="email">Email:</label>
-        <input type="email" name="email" id="email" required>
-        
-        <label for="password">Password:</label>
-        <input type="password" name="password" id="password" required>
-        
-        <button type="submit">Login</button>
-    </form>
+    <div class="container">
+        <h1>Login</h1>        
+            <form class="input-group" action="/phpScripts/process_login.php" method="POST">
+                <input type="email" name="email" id="email" placeholder="Your email" required>
+                <input type="password" name="password" id="password" placeholder="Your password" required>
+                <button type="submit" class="btn">Login</button>
+            </form>        
+        <div class="footer">
+            <p>Forgot your password? <a href="#">Restore</a></p>
+            <p>Don't have an account? <a href="/phpScripts/register.php">Register</a></p>
+        </div>
+    </div>
 </body>
 </html>
