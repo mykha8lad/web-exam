@@ -15,13 +15,6 @@ html {
     overflow-x: hidden;
 }
 
-:root {
-    --text-color: #333333;
-    --hover-color: #ffa200;
-    --description-text-color: #898989;
-    --footer-text-color: #acacac;
-}
-
 body {
     font-family: "Afacad Flux", sans-serif;
 }
